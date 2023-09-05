@@ -2,17 +2,24 @@ import numpy as np
 
 # Crea un array_1 lleno ceros con una longitud de 8 elementos
 
-array_1 = np.array([0] * 8)
+ # array_1 = np.array([0] * 8)
+# o
+array_1 = np.zeros(8) 
+
 print(array_1)
 print("---------------")
+
 # Haz que todos los elementos de este array sean igual a 2
 
 array_1[:] = 2
 print(array_1)
 print("---------------")
+
 # Crea un array_2 que contenga todos los números pares del 1 al 10.
 
-array_2 = np.array([2,4,6,8,10])
+#array_2 = np.array([2,4,6,8,10])
+
+array_2 = np.arange(2,11,2) #( 2 al final es el salto) (2,4,6,8,10) 
 print(array_2)
 print("---------------")
 
@@ -60,7 +67,10 @@ print(comunes2)
 print("---------------")
 
 #Crea un arrays lleno de 1s con una longitud dada por el usuario
- # 1s? --- no entiendo
+ 
+longitud = int(input("Ingrese la longitud del array: "))
+array_unos = np.ones(longitud)
+print(array_unos)
 
 
 

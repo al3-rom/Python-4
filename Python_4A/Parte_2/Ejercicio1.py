@@ -12,19 +12,21 @@ print(array_1)
 # Multiplica todos los elementos del array usando un bucle y después usando un
 # método de numpy. Compara los resultados
 
-array_multiplicado1 = []
-array_multiplicado2 = []
+
+mult_bucle = 1
+mult_bucle2 = 1
 
 # Multiplicamos todos los elementos del array usando un bucle
 for i in array_1:
-    array_multiplicado1 = i*array_1
+    mult_bucle = mult_bucle * i
+    
 print("------1---------")
-print(array_multiplicado1)
+print(mult_bucle)
 
 # usando numpy
-array_multiplicado2 = np.dot(array_1, array_1)
+mult_bucle2 = np.prod(array_1)
 print("------2---------")
-print(array_multiplicado2)
+print(mult_bucle2)
 print("---------------")
 
 # Crea otro array con 15 números decimales aleatorios entre 0 y 1
