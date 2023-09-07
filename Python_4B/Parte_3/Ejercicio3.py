@@ -18,3 +18,33 @@ clima = np.array([
 ])
 
 """
+import numpy as np
+
+
+clima = np.array([
+    [20,70,1009,1],
+    [21,60,1011,1],
+    [22,40,1010,2],
+])
+
+# Calcular la temperatura promedio por mes
+meses = clima[:,3]
+temperaturas = clima[:,0]
+humedad = clima[:,1]
+presion = clima[:,2]
+temp_mes = np.zeros(12)
+humedad_mes = np.zeros(12)
+presion_mes = np.zeros(12)
+# Recorrer los valores para cada mes
+
+for i in range(12):
+    # Calculamos valores promedios
+    temp_mes[i] = np.mean(temperaturas[meses == i+1])
+    humedad_mes[i] = np.mean(humedad[meses == i+1])
+    presion_mes[i] = np.mean(presion[meses == i+1])
+
+    # Imprimimos resultados para cada mes
+    print("La temperatura promedio en el mes", i+1, "fue de", temp_mes[i],"grados")
+    print("La humedad promedio en el mes", i+1, "fue de", humedad_mes[i])
+    print("La presion promedio en el mes", i+1, "fue de", presion_mes[i])
+    
